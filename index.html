@@ -3,10 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card | Frontend Wizards</title>
+    <title>Profile Card | HNG Stage 0</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <article data-testid="test-profile-card" class="profile-card">
+      <figure class="avatar-section">
+        <img
+          src=""
+          alt="Profile photo of Henry"
+          data-testid="test-user-avatar"
+        />
+      </figure>
+
+      <div class="info-section">
+        <header>
+          <h2 data-testid="test-user-name">Ifunanya Henry Nwankwo</h2>
+        </header>
+
+        <p data-testid="test-user-bio">
+          I am MERN stack developer with an eye for aesthetics and quite
+          passionate about clean design and building efficient systems.
+        </p>
+
+        <p class="time">
+          Current Time (ms):
+          <span data-testid="test-user-time" id="userTime"></span>
+        </p>
+
+        <nav aria-label="Social Links">
+          <ul data-testid="test-user-social-links" class="social-links">
+            <li>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-github"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-linkedin"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <section>
+          <h3>Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Problem Solving</li>
+            <li>Web Development</li>
+            <li>Designing</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Bad typography</li>
+            <li>Cluttered layouts</li>
+            <li>Unoptimized images</li>
+          </ul>
+        </section>
+      </div>
+    </article>
     <script src="index.js"></script>
   </body>
 </html>
