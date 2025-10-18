@@ -48,3 +48,8 @@ The goal was to create a small, testable profile card using **only HTML, CSS, an
    ```bash
    Double-click index.html
    ```
+
+## Live Demo
+
+Visit the deployed version here:  
+[https://henrynwankwo.github.io/profile-card/](https://henrynwankwo.github.io/profile-card/)
