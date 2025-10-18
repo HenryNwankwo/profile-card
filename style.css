@@ -4,70 +4,162 @@
   box-sizing: border-box;
 }
 :root {
-  --bg: #f7f9fc;
-  --card-bg: #fff;
-  --primary: #0077ff;
-  --text: #222;
-  --radius: 1rem;
+  --bg: #f0f4f9;
+  --card-bg: #ffffff;
+  --primary: #2563eb;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 1.2rem;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
 }
 
 body {
   background: var(--bg);
-  font-family: system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   min-height: 100vh;
+  color: var(--text);
 }
 
+/* Card Layout */
 .profile-card {
   display: flex;
   flex-direction: column;
   background: var(--card-bg);
   border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   overflow: hidden;
-  max-width: 700px;
+  max-width: 780px;
   width: 100%;
+  transition: var(--transition);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Avatar Section */
+.avatar-section {
+  background: linear-gradient(135deg, var(--primary) 0%, #84cc16 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .avatar-section img {
-  width: 100%;
-  height: auto;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: var(--shadow);
 }
 
+/* Info Section */
 .info-section {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 h2 {
   margin-top: 0;
+  font-size: 1.6rem;
   color: var(--primary);
 }
 
+.bio {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 1.5rem 0;
+}
+
+/* Social Links */
 .social-links {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-links a {
   color: var(--primary);
   text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  background: #eff6ff;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background: var(--primary);
+  color: white;
+  outline: none;
+}
+
+/* Lists */
+section {
+  margin-bottom: 1.5rem;
+}
+
+section h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.list {
+  list-style: disc inside;
+  padding-left: 0.5rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.badge-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.badge-list li {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
   font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
-.social-links a:focus,
-.social-links a:hover {
-  text-decoration: underline;
-  outline: 2px dashed var(--primary);
-  outline-offset: 2px;
+.hobbies li {
+  background: var(--primary-light, #eff6ff);
+  color: var(--primary, #2563eb);
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
-/* Responsive layout */
+.dislikes li {
+  background: var(--danger-light, #feeee2);
+  color: var(--danger, #ef9144);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Responsive Design */
 @media (min-width: 700px) {
   .profile-card {
     flex-direction: row;
@@ -75,9 +167,11 @@ h2 {
 
   .avatar-section {
     flex: 1;
+    padding: 3rem;
   }
 
   .info-section {
     flex: 2;
+    padding: 3rem;
   }
 }
