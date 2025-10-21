@@ -49,7 +49,35 @@ The goal was to create a small, testable profile card using **only HTML, CSS, an
    Double-click index.html
    ```
 
+## New Pages (Stage 1)
+
+### Contact Us
+
+- Includes form validation for name, email, subject, and message.
+- Displays errors under each field and a success message on valid submission.
+
+### About Me
+
+- Reflective page with bio, goals, low confidence areas, and notes to future self.
+- Built with semantic HTML and accessible structure.
+
+---
+
 ## Live Demo
 
 Visit the deployed version here:  
 [https://henrynwankwo.github.io/profile-card/](https://henrynwankwo.github.io/profile-card/)
+
+## Navigation
+
+Added navigation links at the top of each page:
+
+```html
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+
+```
