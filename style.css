@@ -24,7 +24,15 @@ body {
   min-height: 100vh;
   color: var(--text);
 }
-
+.main-body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
 /* Card Layout */
 .profile-card {
   display: flex;
@@ -159,6 +167,132 @@ section h3 {
   border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #005fcc;
+}
+
+.container {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 650px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+input,
+textarea {
+  margin-top: 0.25rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
+  outline: none;
+}
+
+button {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.success {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+/* About Page */
+h1 {
+  font-size: 2rem;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #0077ff;
+  margin-bottom: 0.5rem;
+}
+
+.about-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.about-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.about-section p {
+  line-height: 1.65;
+  color: #334155;
+  font-size: 1rem;
+}
+
 /* Responsive Design */
 @media (min-width: 700px) {
   .profile-card {
@@ -173,5 +307,12 @@ section h3 {
   .info-section {
     flex: 2;
     padding: 3rem;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
   }
 }
